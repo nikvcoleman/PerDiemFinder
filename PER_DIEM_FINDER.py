@@ -35,7 +35,7 @@ def main():
                     print(f_up1)
                 else:
                     print("Goodbye.")
-                sys.exit()
+               # sys.exit()
             except requests.exceptions.ConnectionError as f_up2:
                 print("Unable to connect due to connection error. Please check network connection.")
                 connect_er = input("Would you like more technical information as to why this happened?(y|n): ")
@@ -43,7 +43,7 @@ def main():
                     print(f_up2)
                 else:
                     print("Goodbye.")
-                sys.exit()
+                #sys.exit()
             except requests.exceptions.HTTPError as f_up3:
                 print("Invalid http response.")
                 http_er = input("Would you like more technical information as to why this happened?(y|n): ")
@@ -51,7 +51,7 @@ def main():
                     print(f_up3)
                 else:
                     print("Goodbye.")
-                sys.exit()
+                #sys.exit()
             except requests.exceptions.Timeout as f_up4:
                 print("Request timed out. Goodbye!")
                 time_er = input("Would you like more technical information as to why this happened?(y|n): ")
@@ -59,7 +59,7 @@ def main():
                     print(f_up4)
                 else:
                     print("Goodbye.")
-                sys.exit()
+                #sys.exit()
     elif here_or_there == str(2):
         print("OPTION NOT HERE YET")
     else:
