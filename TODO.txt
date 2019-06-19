@@ -1,0 +1,5 @@
+1. [ IN PROCESS ] Add exceptions for error handling
+2. [ IN PROCESS ] Add an overseas function for people traveling outside of CONUS
+3. [ DONE ] Define main()
+4. [ IN PROCESS ] GSA.GOV has a print option for the meals and incidentals table...
+                  I need to print those to a pdf file and save to the device...still looking how to do that with python.
