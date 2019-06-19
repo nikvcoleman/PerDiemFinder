@@ -5,7 +5,7 @@
 import requests
 import bs4
 import sys
-
+import time
 
 def main():
     print("Welcome to Per Diem Finder\nThis program was written by: Nikolas Coleman\n")
