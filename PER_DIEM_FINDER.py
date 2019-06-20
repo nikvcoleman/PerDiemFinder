@@ -28,9 +28,10 @@ def main():
                 soup = bs4.BeautifulSoup(webpage.content, "html.parser")
                 rate_find = soup.find("td", headers="MIE").get_text()
                 first_last = soup.find("td", headers="firstLast").get_text()
-                print("Per diem rate for first and last day of travel is: " + first_last)
+                print("\nPer diem rate for first and last day of travel is: " + first_last)
                 print("The rate according to the zip code is: " + rate_find + " per day. ")
                 print("PLEASE DOUBLE CHECK THIS LINK TO CONFIRM THIS INFORMATION IS CORRECT:\n" + conus_url)
+                time.sleep(180)
             except AttributeError as f_up1:
                 print("Attribute Error. That's all I know.")
                 attribute_er = input("Would you like more technical information as to why this happened?(y|n): ")
