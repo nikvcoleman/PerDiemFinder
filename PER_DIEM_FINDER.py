@@ -20,6 +20,8 @@ def main():
 
         if len(conus_hotel_zipcode) > 5:
             print("Zip code entered is too long. Please limit the zip code to 4 digits please.")
+            time.wait(30)
+            sys.exit()
         elif len(conus_hotel_zipcode) == 5:
             try:
                 webpage = requests.get(conus_url)
