@@ -10,18 +10,21 @@ import time
 
 def main():
     print("Welcome to Per Diem Finder\nThis program was written by: Nikolas Coleman\n")
+    fiscal_year = input("What is the current fiscal year?: ")
     here_or_there = input("Please select the option that applies to you.\n1. I am looking at rates INSIDE the CONUS\n\
 2. I am looking at rates OUTSIDE of the CONUS\n(1|2): ")
     if here_or_there == str(1):
         conus_hotel_zipcode = input("What is the zip code of the hotel you are staying at?: ")
         # automate this to get the files from gsa.gov and save them later once we find out how
         conus_url = ("https://www.gsa.gov/travel/plan-book/per-diem-rates/per-diem-rates-lookup/?action=perdiems_report\
-&fiscal_year=2019&city=&state=&zip=" + conus_hotel_zipcode)
+&fiscal_year=" + fiscal_year +"&city=&state=&zip=" + conus_hotel_zipcode)
 
         if len(conus_hotel_zipcode) > 5:
             print("Zip code entered is too long. Please limit the zip code to 4 digits please.")
             time.wait(30)
             sys.exit()
+        elif len(fiscal_year) > 5:
+             print("Oops! Please enter a four digit fiscal year.")
         elif len(conus_hotel_zipcode) == 5:
             try:
                 webpage = requests.get(conus_url)
