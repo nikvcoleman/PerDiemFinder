@@ -1,3 +1,4 @@
+##DUE TO THE ISS EXPENSE DEPARTMENT CHANGING THE EXCEL SPREADSHEET EVERY WEEK THIS IS NOW AN ARCHIVED PROJECT.
 # PerDiemFinder
 Python3.7 script for getting Per Diem rates based on gsa.gov 
 
